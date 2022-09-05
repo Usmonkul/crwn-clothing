@@ -1,5 +1,5 @@
 import React from "react";
-import SHOP_DATA from "../../../shop-data/shop-data.json";
+import SHOP_DATA from "../../shop-data/shop-data.json";
 
 const Shop = () => {
   return (
