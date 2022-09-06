@@ -1,11 +1,18 @@
 import React, { useState, createContext } from "react";
+import PRODUCTS from "../shop-data/shop-data.json";
 
-export const ProductContext = createContext({});
+export const ProductsContext = createContext({
+  products: [],
+});
 
-export const ProductProvider = ({ children }) => {
-  const [data, setData] = useState();
+export const ProductsProvider = ({ children }) => {
+  const [products, setProducts] = useState(PRODUCTS);
+
+  const value = { products };
 
   return (
-    <ProductContext.Provider value={data}>{children}</ProductContext.Provider>
+    <ProductsContext.Provider value={value}>
+      {children}
+    </ProductsContext.Provider>
   );
 };
